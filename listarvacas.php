@@ -24,7 +24,10 @@
   gtag('config', 'UA-94034622-3');
 </script>
 <!-- /END GA --></head>
-<?php include "DBConnection.php";?>
+<?php 	$link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu@papemanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);
+	}?>
 <?php include "sessaosegurauser.php";?>
 <body>
   <div id="app">
