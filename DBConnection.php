@@ -1,8 +1,7 @@
 	
 	<?php
-	$db_name= 'pap';
-	$link= mysqli_connect('localhost','root','',$db_name);
-	if(!$link){
-		die('Could not connect: '.mysql_error());
+	$link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu@papemanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);
 	}
 	?>
