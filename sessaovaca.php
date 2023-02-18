@@ -1,6 +1,6 @@
 <?php
 // CONECTA COM A BASE DE DADOS
-include 'DBConnection.php';
+include "DBConnection.php";
 // RECEBE OS DADOS DO FORMULÁRIO
 $vaca=$_POST['vaca'];
 // VERIFICA
