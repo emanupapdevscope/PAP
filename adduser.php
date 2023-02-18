@@ -134,7 +134,7 @@
 	while($row2=mysqli_fetch_array($result2)){
 	$coduser=$row2['coduser'];
 	}
-    $ext = strtolower(substr($_FILES['pic']['name'],-4)); // extensão da imagem
+    $ext = '.jpg'; // extensão da imagem
     $new_name = $coduser . $ext; // novo nome para a imagem
     $dir = 'imagens_users/'; //pasta para onde vao as imagens 
     move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload da imagem

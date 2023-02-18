@@ -187,7 +187,7 @@ if (((isset($_POST["num"])) && (isset($_POST["data"]))&& (isset($_POST["espec"])
 <?php
  if(isset($_FILES['pic']))
  {
-    $ext = strtolower(substr($_FILES['pic']['name'],-4)); // extensão da imagem
+    $ext = '.jpg'; // extensão da imagem
     $new_name = $fnum . $ext; // novo nome para a imagem
     $dir = 'imagens_vacas/'; //pasta para onde vao as imagens 
     move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload da imagem

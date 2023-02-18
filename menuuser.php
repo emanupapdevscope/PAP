@@ -136,7 +136,7 @@
 		  $users=mysqli_query($link,"Select * from utilizadores where coduser='$fotouser'");
 		  while ($varusers=mysqli_fetch_array($users)){?>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img src="<?php echo $dirftuser.$fotouser;?>" class="rounded-circle mr-1">
+            <img src="<?php echo $dirftuser.$fotouser.'.jpg';?>" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">Olá, <?php echo $varusers['nome'];?> :)</div></a><?php } ?>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
