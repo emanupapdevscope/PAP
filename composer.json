@@ -3,6 +3,8 @@
     "description": "qrcode",
     "require": {
 		"php": "^7.4.26",
+    "predis/predis": "^1.1",
 		"chillerlan/php-qrcode": "dev-main"
 	}
+
 }

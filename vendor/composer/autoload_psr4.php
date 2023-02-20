@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'chillerlan\\Settings\\' => array($vendorDir . '/chillerlan/php-settings-container/src'),
     'chillerlan\\QRCode\\' => array($vendorDir . '/chillerlan/php-qrcode/src'),
+    'Predis\\' => array($vendorDir . '/predis/predis/src'),
 );
