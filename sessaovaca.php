@@ -1,5 +1,5 @@
 <?php
-session_start();
+include 'sessaosegurauser.php';
 // CONECTA COM A BASE DE DADOS
 $link = mysqli_init();
 mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);

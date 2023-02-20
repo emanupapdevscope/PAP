@@ -1,5 +1,5 @@
 <?php
-	session_start();
+include 'sessaosegurauser.php';
 $divide  = explode("?", $_SERVER["REQUEST_URI"]);
 $divide['1'];
 
