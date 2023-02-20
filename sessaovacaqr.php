@@ -4,7 +4,9 @@ $divide  = explode("?", $_SERVER["REQUEST_URI"]);
 $divide['1'];
 
 // CONECTA COM A BASE DE DADOS
-include 'DBConnection.php';
+$link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);
 // RECEBE OS DADOS DO FORMULÁRIO
 $vaca=$divide['1'];
 // VERIFICA
