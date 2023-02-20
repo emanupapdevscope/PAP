@@ -2,7 +2,9 @@
  
  <?php 
 	session_start();
-	include 'DBConnection.php';
+	$link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);
 	$vaca=$_SESSION['vaca'];
 	if ((isset($_POST["medic"])) && (isset($vaca)) && (isset($_POST["dose"])) & (isset($_POST["motivo"]))){
 		$fmedic=$_POST["medic"];
