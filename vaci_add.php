@@ -1,5 +1,4 @@
-<!-- Registar Leite -->		
- 
+<!-- Registar Leite -->	 
  <?php 
 	session_start();
 	$link = mysqli_init();

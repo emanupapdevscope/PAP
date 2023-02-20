@@ -1,4 +1,4 @@
- <?php include 'sessaosegurauser.php';
+ <?php session_start();
 	
 	$link = mysqli_init();
 	mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
