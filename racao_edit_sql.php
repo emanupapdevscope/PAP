@@ -1,6 +1,6 @@
 <?php
 	include 'DBConnection.php';
-	include'sessaoseguraadmin.php';
+	include 'sessaoseguraadmin.php';
 			$divide  = explode("?", $_SERVER["REQUEST_URI"]);
 			$divide['1'];
 			$idracao=$divide['1'];

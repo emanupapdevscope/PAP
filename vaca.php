@@ -1,10 +1,6 @@
+<?php include 'sessaosegurauser.php';?>
 <!DOCTYPE html>
-<?php session_start();
-if (isset($_SESSION['iduser'])){
-}
-else{
-	Header("refresh:0.1;url=index.php");}
-?>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -38,12 +34,15 @@ else{
 </script>
 <!-- /END GA --></head>
 
-<?php 	$link = mysqli_init();
-		mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
-		mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);?>
+<?php include "DBConnection.php";?>
 
 <?php
-		$vaca=$_SESSION['vaca'];
+if (isset($_SESSION['vaca'])){
+  $vaca=$_SESSION['vaca'];
+}else{
+$divide  = explode("?", $_SERVER["REQUEST_URI"]);
+$divide['1'];
+$vaca=$divide['1'];}
 		$qry="Select * from vacas where numero ='$vaca' ";
 		$result=mysqli_query($link,$qry);
 		$row=mysqli_fetch_array($result);
@@ -110,7 +109,7 @@ else{
                   <div class="col-12 col-sm-6 col-lg-12">
                     <div class="card">
                       <div class="card-body">
-					  <form action="registarleite.php" method="POST">
+					  <form action="registarleite.php?<?php echo $vaca; ?>" method="POST">
                       <div class="form-group">
                       <label for="leite"><h5>Leite</h5></label><br>
                       <label>Date Time Picker</label>
@@ -145,7 +144,7 @@ else{
 			
                    <div class="card card-danger">
                       <div class="card-body">
-					  <form action="vaci_add.php" method="POST">
+					  <form action="vaci_add.php?<?php echo $vaca; ?>" method="POST">
                       <div class="form-group">
                       <label for="vacinacao"><h5>Vacinação</h5></label>
 					 <div class="row">

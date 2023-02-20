@@ -1,6 +1,6 @@
 <?php
 	include 'DBConnection.php';
-	include'sessaoseguraadmin.php';
+	include 'sessaoseguraadmin.php';
 	if (((isset($_POST["stock"])) ))
 						{
 							$divide  = explode("?", $_SERVER["REQUEST_URI"]);

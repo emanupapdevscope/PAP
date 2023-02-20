@@ -140,6 +140,7 @@
             </div>
           </li>
 		  <?php
+      include 'DBConnection.php';
 		  $dirftuser='imagens_users/';
 		  $fotouser=$_SESSION['iduser'];
 		  $users=mysqli_query($link,"Select * from utilizadores where coduser='$fotouser'");

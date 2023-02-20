@@ -1,3 +1,4 @@
+<?php include 'sessaosegurauser.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +29,12 @@
   gtag('config', 'UA-94034622-3');
 </script>
 <!-- /END GA --></head>
-<?php include 'sessaosegurauser.php';?>
-<?php include "DBConnection.php";?>
+
+<?php $link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "dbemanu.mysql.database.azure.com", "emanu", "L@ctog@l2205", "pap", 3306, MYSQLI_CLIENT_SSL);?>
 <body>
-  <?php include'menuuser.php';?>
+  <?php include 'menuuser.php';?>
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -118,7 +121,8 @@
                 <div class="card-body" id="top-5-scroll">
                   <ul class="list-unstyled list-unstyled-border">
 				  <?php while ($row=mysqli_fetch_array($result)){
-					$fotoname=$row['numero'];?>
+					 $ext='.jpg';
+					$fotoname=$row['numero'].$ext;?>
                     <li class="media">
                       <img class="mr-3 rounded" width="55" src="<?php echo $dir.$fotoname;?>">
                       <div class="media-body">

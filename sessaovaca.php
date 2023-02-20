@@ -1,9 +1,9 @@
 <?php
-	session_start();
+session_start();
 // CONECTA COM A BASE DE DADOS
-	$link = mysqli_init();
-		mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
-		mysqli_real_connect($link, "papemanu.mysql.database.azure.com", "emanu", "P@ssword1", "pap", 3306, MYSQLI_CLIENT_SSL);
+$link = mysqli_init();
+mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
+mysqli_real_connect($link, "dbemanu.mysql.database.azure.com", "emanu", "L@ctog@l2205", "pap", 3306, MYSQLI_CLIENT_SSL);
 // RECEBE OS DADOS DO FORMULÁRIO
 $vaca=$_POST['vaca'];
 // VERIFICA
@@ -20,7 +20,7 @@ Header("Location:$pag");
 }
 //se tiver devolvido algo vai para a pagina vaca.php
 else {
-
+	
 	//GRAVA AS VARIÁVEIS NA SESSÃO
 	$_SESSION['vaca'] = $vaca;
 	Header("Location:vaca.php");

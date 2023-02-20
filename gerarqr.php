@@ -6,7 +6,7 @@ namespace chillerlan\QRCodeExamples;
 use chillerlan\QRCode\{QRCode, QROptions};
 
 include "./vendor/autoload.php";
-$url = '/pap/sessaovacaqr.php?'.$_SESSION['numqr'];
+$url = '/sessaovacaqr.php?'.$_SESSION['numqr'];
 
 // quick and simple:
 //echo '<img src="'.(new QRCode)->render($url).'" alt="QR Code" />';

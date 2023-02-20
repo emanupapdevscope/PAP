@@ -1,4 +1,6 @@
+<?php include "sessaoseguraadmin.php";?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -28,11 +30,11 @@
   gtag('config', 'UA-94034622-3');
 </script>
 <!-- /END GA --></head>
-<?php include "sessaoseguraadmin.php";?>
+
 <?php include "DBConnection.php";?>
 <body>
   
-	<?php include'menuadmin.php';?>
+	<?php include 'menuadmin.php';?>
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -47,7 +49,7 @@
 						<div class="input-group mb-3">					
                         <input type="text" class="form-control" name="vaca" aria-label="">
                         <div class="input-group-append">
-						<?php $url='leitorqr2.html'; ?>
+						<?php $url='leitorqr.html'; ?>
                           <button onclick="window.location.href='<?php echo $url; ?>';"  target="_blank" type="button" class="btn btn-primary" >QRC</button>
                         </div>
 						<div class="card-header">
@@ -182,7 +184,8 @@
                 <div class="card-body" id="top-5-scroll">
                   <ul class="list-unstyled list-unstyled-border">
 				  <?php while ($row=mysqli_fetch_array($result)){
-					$fotoname=$row['numero'];?>
+					$ext='.jpg';
+					$fotoname=$row['numero'].$ext;?>
                     <li class="media">
                       <img class="mr-3 rounded" width="55" src="<?php echo $dir.$fotoname;?>">
                       <div class="media-body">

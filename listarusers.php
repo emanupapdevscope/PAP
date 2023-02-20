@@ -1,3 +1,5 @@
+
+<?php session_start();include 'sessaoseguraadmin.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +27,12 @@
 </script>
 <!-- /END GA --></head>
 <?php include "DBConnection.php";?>
-<?php include "sessaosegurauser.php";?>
+
 <body>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
      
-		<?php 
-		 if (($_SESSION['tipo']==1)){
-		 include'menuadmin.php';}
-		 else{
-		  include'menuuser.php';}?>
+		<?php include 'menuadmin.php';?>
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -43,7 +41,7 @@
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="admin.php">Dashboard</a></div>
               <div class="breadcrumb-item"><a href="#">Utilizadores</a></div>
-              <div class="breadcrumb-item">Listar Utilizadores</div>
+              <div class="breadcrumb-item"> <?php echo $_SESSION['iduser']; ?></div>
             </div>
           </div>
 
@@ -90,7 +88,7 @@
                           <td><?php echo $row['nome'];?></td>
                           <td><?php echo $row['password'];?></td>
 						  <td><?php if($row['tipo']==1){echo "Administrador";}else{echo"Normal";}?></td>
-						  <td><button onclick="window.location.href='<?php echo $url; ?>';" class="btn btn-primary btn-lg btn-block">Eliminar</button></td>
+						  <td><button onclick="window.location.href='<?php echo $url; ?>';" class="btn btn-primary btn-lg btn-block">Eliminarr</button></td>
                         </tr>
                       </tbody>
 					  <?php	}?>

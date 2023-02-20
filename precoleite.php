@@ -1,3 +1,4 @@
+<?php include 'sessaoseguraadmin.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,14 +26,14 @@
 </script>
 <!-- /END GA --></head>
 <?php include'DBConnection.php';?>
-<?php include'sessaoseguraadmin.php';?>
+
 <body>
   <div id="app">
   <?php 
 		 if (($_SESSION['tipo']==1)){
-		 include'menuadmin.php';}
+		 include 'menuadmin.php';}
 		 else{
-		  include'menuuser.php';}?>
+		  include 'menuuser.php';}?>
     <div class="main-wrapper main-wrapper-1">
 	
       <!-- Main Content -->

@@ -34,6 +34,6 @@
 						echo"Erro ao inserir!Erro: ".mysqli_error($link)."";
 						}
 					
-					}		
+					}		else{echo 'Erroooo';}
 					
  ?>

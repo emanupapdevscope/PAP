@@ -35,9 +35,9 @@
 <body>
 <?php 
 		 if (($_SESSION['tipo']==1)){
-		 include'menuadmin.php';}
+		 include 'menuadmin.php';}
 		 else{
-		  include'menuuser.php';}?>
+		  include 'menuuser.php';}?>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <!-- Main Content -->

@@ -1,3 +1,4 @@
+<?php include "sessaoseguraadmin.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +33,9 @@
 </script>
 <!-- /END GA --></head>
 <?php include "DBConnection.php";?>
-<?php include "sessaoseguraadmin.php";?>
+
 <body>
-<?php include'menuadmin.php';?>
+<?php include 'menuadmin.php';?>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <!-- Main Content -->
@@ -187,7 +188,7 @@ if (((isset($_POST["num"])) && (isset($_POST["data"]))&& (isset($_POST["espec"])
 <?php
  if(isset($_FILES['pic']))
  {
-    $ext = '.jpg'; // extensão da imagem
+    $ext = strtolower(substr($_FILES['pic']['name'],-4)); // extensão da imagem
     $new_name = $fnum . $ext; // novo nome para a imagem
     $dir = 'imagens_vacas/'; //pasta para onde vao as imagens 
     move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload da imagem

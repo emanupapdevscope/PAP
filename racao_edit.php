@@ -32,7 +32,7 @@
 </script>
 <!-- /END GA --></head>
 <?php include "DBConnection.php";?>
-<?php include'sessaoseguraadmin.php';?>
+<?php include 'sessaoseguraadmin.php';?>
 <body>
 <?php include'menuadmin.php';?>
   <div id="app">
