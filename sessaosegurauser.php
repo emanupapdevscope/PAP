@@ -3,9 +3,9 @@ require 'vendor/autoload.php';
 use Predis\Client;
 $redis = new Predis\Client([
     'scheme' => 'tcp',
-    'host'   => 'redis-host-name.redis.cache.windows.net',
-    'port'   => 6379,
-    'password' => 'redis-access-key'
+    'host'   => 'emanu.redis.cache.windows.net',
+    'port'   => 6380,
+    'password' => 'dF2qyIAwXjJUPlRpfhGcnNnWQqPOyAoKKAzCaJhJWho='
 ]);
 session_start();
 if (isset($_SESSION['iduser'])){
