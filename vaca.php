@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<?php include'sessaosegurauser.php';?>
+<?php session_start();
+if (isset($_SESSION['iduser'])){
+}
+else{
+	Header("refresh:0.1;url=index.php");}
+?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
