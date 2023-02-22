@@ -1,4 +1,5 @@
 <?php
+
 	require 'vendor/autoload.php';
 	use Predis\Client;
 	$redis = new Predis\Client([
@@ -7,6 +8,7 @@
 		'port'   => 6380,
 		'password' => 'dF2qyIAwXjJUPlRpfhGcnNnWQqPOyAoKKAzCaJhJWho='
 	]);
+	session_save_path('/sessao');
 	session_start();
 // CONECTA COM A BASE DE DADOS
 $link = mysqli_init();
