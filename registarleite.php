@@ -1,4 +1,4 @@
- <?php include 'sessaosegurauser.php';
+ <?php include "sessaosegurauser.php";
 	
 	$link = mysqli_init();
 	mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
