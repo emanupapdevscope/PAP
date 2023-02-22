@@ -17,8 +17,8 @@ session_start();
 		
 		if($query){
 			$iduser=$_SESSION['iduser'];
-			echo $iduser;
-			$log=mysqli_query($link,"insert into logs(idu,descricao) values(iduser,'RegistouLeite')");
+			echo $_SESSION['iduser'];
+			$log=mysqli_query($link,"insert into logs(idu,descricao) values($iduser,'RegistouLeite')");
 			if($log){			
 				header("Location:vaca.php?.$vaca");
 						}
