@@ -1,4 +1,10 @@
- <?php include "sessaosegurauser.php";
+ <?php
+session_start();
+if (isset($_SESSION['iduser'])){
+}
+else{
+	Header("refresh:0.1;url=index.php");}
+
 	
 	$link = mysqli_init();
 	mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
