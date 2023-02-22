@@ -1,5 +1,6 @@
-
-<?php require 'vendor/autoload.php';
+<?php 
+session_save_path('/sessao');
+require 'vendor/autoload.php';
 use Predis\Client;
 $redis = new Predis\Client([
     'scheme' => 'tcp',
