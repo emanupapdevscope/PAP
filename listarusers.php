@@ -9,10 +9,8 @@ $redis = new Predis\Client([
 ]);
 
 session_start();
+
 if($_SESSION['tipo'] == 1){
-    $_SESSION['iduser']=$_SESSION['iduser'];
-	$_SESSION['user']=$_SESSION['user'];
-	$_SESSION['tipo'] = $_SESSION['tipo'];
 }
 else{
 	Header("refresh:0.1;url=user.php");}?>
@@ -56,7 +54,7 @@ else{
             <h1>Listagem de Utilizadores</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="admin.php">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Utilizadores</a></div>
+              <div class="breadcrumb-item"><a href="#">Utilizadores 2</a></div>
               <div class="breadcrumb-item"> <?php echo $_SESSION['iduser']; ?></div>
             </div>
           </div>
