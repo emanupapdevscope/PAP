@@ -1,4 +1,4 @@
-<?php session_save_path('/sessao');
+<?php
 include "sessaoseguraadmin.php";?>
 <!DOCTYPE html>
 

@@ -1,13 +1,5 @@
 <?php
-	require 'vendor/autoload.php';
-	use Predis\Client;
-	$redis = new Predis\Client([
-		'scheme' => 'tcp',
-		'host'   => 'emanu.redis.cache.windows.net',
-		'port'   => 6380,
-		'password' => 'dF2qyIAwXjJUPlRpfhGcnNnWQqPOyAoKKAzCaJhJWho='
-	]);
-	session_start();
+
 // CONECTA COM A BASE DE DADOS
 $link = mysqli_init();
 mysqli_ssl_set($link,NULL,NULL, 'ca.pem', NULL, NULL);
@@ -42,7 +34,7 @@ else {
     
 	
 	//INICIALIZA A SESSÃO
-
+session_start();
 	//GRAVA AS VARIÁVEIS NA SESSÃO
 	$_SESSION['iduser']=$iduser;
 	$_SESSION['user']=$user;

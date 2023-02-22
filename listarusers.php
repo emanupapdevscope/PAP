@@ -1,5 +1,4 @@
 <?php 
-session_save_path('/sessao');
 session_start();
 
 if($_SESSION['tipo'] == 1){
