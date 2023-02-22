@@ -1,9 +1,10 @@
  <?php
 session_start();
-if (isset($_SESSION['iduser'])){
+
+if($_SESSION['tipo'] == 1){
 }
 else{
-	Header("refresh:0.1;url=index.php");}
+	Header("refresh:0.1;url=user.php");}
 
 	
 	$link = mysqli_init();
