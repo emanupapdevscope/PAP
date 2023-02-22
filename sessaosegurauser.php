@@ -9,6 +9,9 @@ $redis = new Predis\Client([
 ]);
 session_start();
 if (isset($_SESSION['iduser'])){
+    $_SESSION['iduser']=$_SESSION['iduser'];
+	$_SESSION['user']=$_SESSION['user'];
+	$_SESSION['tipo'] = $_SESSION['tipo'];
 }
 else{
 	Header("refresh:0.1;url=index.php");}
