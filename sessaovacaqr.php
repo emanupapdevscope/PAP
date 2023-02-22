@@ -25,6 +25,8 @@ Header("Location:$pag");
 else {
 
 	//GRAVA AS VARIÁVEIS NA SESSÃO
+	$iduser=$_SESSION['iduser'];
+	$_SESSION['iduser']=$iduser;
 	$_SESSION['vaca'] = $vaca;
 	Header("Refresh:0.2; url=vaca.php");
 
