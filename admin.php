@@ -1,4 +1,5 @@
-<?php include "sessaoseguraadmin.php";?>
+<?php session_save_path('/sessao');
+include "sessaoseguraadmin.php";?>
 <!DOCTYPE html>
 
 <html lang="en">
